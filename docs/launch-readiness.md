@@ -6,11 +6,11 @@ The site is structurally ready for a soft launch or staging review. It has a hom
 
 ## Items to replace before a public paid launch
 
-- Replace placeholder phone number `(206) 555-0198` with the real business phone number.
-- Replace `hello@cascadiadeckfence.com` if the final email address is different.
+- Replace placeholder phone number `[INSERT MY PHONE]` with the real business phone number.
+- Replace `[INSERT MY EMAIL]` if the final email address is different.
 - Confirm the production domain and update canonical URLs if the launch domain is not `https://cascadiadeckfence.com/`.
 - Add real project photos, owner/team details, license/insurance information, warranty language, and service terms before running paid ads.
-- Connect forms to a real form backend or CRM. The current forms work for static demos and Netlify-style collection, and they store a local browser copy for testing.
+- Configure Vercel environment variables for production lead delivery: `RESEND_API_KEY`, `LEAD_TO_EMAIL`, and optionally `LEAD_FROM_EMAIL`. Until these are configured, the `/api/lead` endpoint returns a clear setup error instead of showing a fake success message.
 
 ## Content sufficiency
 
@@ -35,3 +35,7 @@ Possible future integration paths:
 ## Vercel deployment
 
 Vercel support files are included in `vercel.json`. Use framework preset `Other`, root directory `.`, build command `npm run build`, and output directory `dist`. More details are in `docs/vercel-deploy.md`.
+
+## Lead form delivery
+
+Estimate, contact, and registration forms post to `/api/lead`. The Vercel serverless function sends email through Resend when `RESEND_API_KEY` and `LEAD_TO_EMAIL` are set in the Vercel project environment. This avoids the previous static-site problem where a browser could show success while only storing the lead locally.

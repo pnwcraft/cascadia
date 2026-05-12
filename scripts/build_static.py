@@ -16,6 +16,9 @@ FILES = [
     'index.html',
     '404.html',
     'client-registration.html',
+    'projects.html',
+    'service-areas.html',
+    'contact.html',
     'robots.txt',
     'sitemap.xml',
 ]
@@ -41,6 +44,7 @@ def copy_directory(relative_path: str) -> None:
 
 
 def main() -> int:
+    subprocess.run([sys.executable, str(ROOT / 'scripts' / 'check_conflicts.py')], check=True)
     subprocess.run([sys.executable, str(ROOT / 'scripts' / 'check_site.py')], check=True)
     if DIST.exists():
         shutil.rmtree(DIST)

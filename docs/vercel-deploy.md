@@ -44,3 +44,13 @@ Serving `.` can work for very small static projects, but it also risks publishin
 ## Note about clean URLs and rewrites
 
 Do not add `.html` extensions to rewrite destinations while `cleanUrls` is enabled. Vercel documents that when `cleanUrls` is `true`, source and destination paths in rewrite rules should omit file extensions. This project currently does not need rewrites because the physical `.html` files are present in `dist/` and `cleanUrls` handles extensionless URLs.
+
+## Lead form environment variables
+
+The static pages submit forms to the Vercel serverless function at `/api/lead`. Add these environment variables in Vercel before relying on production leads:
+
+- `RESEND_API_KEY`: API key from Resend.
+- `LEAD_TO_EMAIL`: inbox that should receive estimate/contact/registration requests.
+- `LEAD_FROM_EMAIL` optional: verified sender address. If omitted, the endpoint uses Resend's onboarding sender for testing.
+
+If those variables are missing, the endpoint returns a setup error and the visitor is told to call or email directly instead of seeing a fake success message.

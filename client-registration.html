@@ -10,20 +10,7 @@
   <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="/"><img src="/assets/logo.svg" alt="Cascadia Deck & Fence logo"><span>Cascadia<small>Deck & Fence</small></span></a>
-      <button class="mobile-toggle" aria-expanded="false" aria-label="Open navigation">☰</button>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="/services/deck-building-seattle.html">Decks</a>
-        <a href="/services/fence-installation-seattle.html">Fences</a>
-        <a href="/locations/seattle.html">Seattle Area</a>
-        <a href="/blog/">Blog</a>
-        <a href="/client-registration.html">Client Registration</a>
-        <a class="btn" href="/#estimate">Free Estimate</a>
-      </nav>
-    </div>
-  </header>
+  <header class="site-header"><div class="container nav"><a class="brand" href="/"><img src="/assets/logo.svg" alt="Cascadia Deck & Fence logo"><span>Cascadia<small>Deck & Fence</small></span></a><button class="mobile-toggle" aria-expanded="false" aria-label="Open navigation">☰</button><nav class="nav-links" aria-label="Main navigation"><a href="/">Home</a><a href="/services/deck-building-seattle.html">Decks</a><a href="/services/fence-installation-seattle.html">Fences</a><a href="/projects.html">Projects</a><a href="/service-areas.html">Service Areas</a><a href="/contact.html">Contact</a></nav><div class="header-actions"><a class="btn ghost" href="tel:[INSERT MY PHONE]">Call Now</a><a class="btn" href="/#estimate">Request a Free Estimate</a></div></div></header>
 
   <main>
     <section class="page-hero">
@@ -43,7 +30,7 @@
           <div class="card">
             <h3>Best next production upgrade</h3>
             <ul>
-              <li>Connect forms to Netlify Forms, Formspree, HubSpot, or a secure backend.</li>
+              <li>Connect forms to the Vercel `/api/lead` endpoint, HubSpot, Jobber, Airtable, or another secure CRM workflow.</li>
               <li>Add file upload for photos, survey documents, and inspiration images.</li>
               <li>Add automated email confirmation and calendar booking.</li>
               <li>Add a real login portal only if clients need private estimates, invoices, or project updates.</li>
@@ -51,9 +38,9 @@
           </div>
         </div>
 
-        <form name="client-registration" method="post" data-netlify="true" data-client-registration-form class="card">
+        <form name="client-registration" method="post" action="/api/lead" data-client-registration-form class="card">
           <input type="hidden" name="form-name" value="client-registration">
-          <div class="notice" role="status">Thank you — your registration was saved.</div>
+          <div class="notice" role="status">Submit the form and we will send your registration to Cascadia Deck & Fence.</div>
           <div class="form-row">
             <p><label for="client-name">Full name *</label><input id="client-name" name="client-name" autocomplete="name" required></p>
             <p><label for="client-phone">Phone *</label><input id="client-phone" name="client-phone" autocomplete="tel" required></p>
@@ -76,7 +63,7 @@
     </section>
   </main>
 
-  <footer class="footer"><div class="container"><div><strong>Cascadia Deck & Fence</strong><p>Project registration and estimates for Greater Seattle homeowners.</p></div><div><a href="/services/deck-building-seattle.html">Deck building</a><a href="/services/fence-installation-seattle.html">Fence installation</a></div><div><a href="/locations/seattle.html">Seattle</a><a href="/locations/bellevue.html">Bellevue</a></div><div><a href="tel:+12065550198">(206) 555-0198</a><a href="/">Home</a></div></div></footer>
+  <footer class="footer"><div class="container"><div><strong>Cascadia Deck & Fence</strong><p>Project registration and estimates for Greater Seattle homeowners.</p></div><div><a href="/services/deck-building-seattle.html">Deck building</a><a href="/services/fence-installation-seattle.html">Fence installation</a></div><div><a href="/locations/seattle.html">Seattle</a><a href="/locations/bellevue.html">Bellevue</a></div><div><a href="tel:[INSERT MY PHONE]">[INSERT MY PHONE]</a><a href="/">Home</a></div></div></footer>
   <script src="/assets/site.js"></script>
 </body>
 </html>
