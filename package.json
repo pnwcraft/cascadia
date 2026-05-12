@@ -5,8 +5,9 @@
   "description": "SEO-focused static website for Cascadia Deck & Fence in the Greater Seattle area.",
   "scripts": {
     "start": "python3 -m http.server 4173",
-    "check": "python3 scripts/check_site.py",
-    "build": "python3 scripts/build_static.py"
+    "check": "npm run check:conflicts && python3 scripts/check_site.py",
+    "build": "python3 scripts/build_static.py",
+    "check:conflicts": "python3 scripts/check_conflicts.py"
   },
   "devDependencies": {}
 }

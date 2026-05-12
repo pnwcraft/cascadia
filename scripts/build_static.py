@@ -44,6 +44,7 @@ def copy_directory(relative_path: str) -> None:
 
 
 def main() -> int:
+    subprocess.run([sys.executable, str(ROOT / 'scripts' / 'check_conflicts.py')], check=True)
     subprocess.run([sys.executable, str(ROOT / 'scripts' / 'check_site.py')], check=True)
     if DIST.exists():
         shutil.rmtree(DIST)
