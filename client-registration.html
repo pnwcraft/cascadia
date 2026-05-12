@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Client Registration | Cascadia Deck & Fence Seattle</title>
+  <meta name="description" content="Register your Cascadia Deck & Fence project file for a Seattle-area deck, fence, railing, gate, repair, or outdoor living estimate.">
+  <link rel="canonical" href="https://cascadiadeckfence.com/client-registration.html">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="site-header"><div class="container nav"><a class="brand" href="/"><img src="/assets/logo.svg" alt="Cascadia Deck & Fence logo"><span>Cascadia<small>Deck & Fence</small></span></a><button class="mobile-toggle" aria-expanded="false" aria-label="Open navigation">☰</button><nav class="nav-links" aria-label="Main navigation"><a href="/">Home</a><a href="/services/deck-building-seattle.html">Decks</a><a href="/services/fence-installation-seattle.html">Fences</a><a href="/projects.html">Projects</a><a href="/service-areas.html">Service Areas</a><a href="/contact.html">Contact</a></nav><div class="header-actions"><a class="btn ghost" href="tel:[INSERT MY PHONE]">Call Now</a><a class="btn" href="/#estimate">Request a Free Estimate</a></div></div></header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="breadcrumbs"><a href="/">Home</a> / Client Registration</p>
+        <h1>Client project registration for Seattle-area deck and fence work.</h1>
+        <p>Use this form after, or before, requesting a free estimate when you want Cascadia Deck & Fence to create a more complete project file.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container form-wrap">
+        <div>
+          <p class="eyebrow">What this form does</p>
+          <h2>It is a client intake form, not a password account.</h2>
+          <p class="section-intro">A static website cannot safely create private customer accounts without a backend. This registration form is ready for production lead intake and can later connect to a CRM, Airtable, HubSpot, Jobber, Housecall Pro, or a custom customer portal.</p>
+          <div class="card">
+            <h3>Best next production upgrade</h3>
+            <ul>
+              <li>Connect forms to Netlify Forms, Formspree, HubSpot, or a secure backend.</li>
+              <li>Add file upload for photos, survey documents, and inspiration images.</li>
+              <li>Add automated email confirmation and calendar booking.</li>
+              <li>Add a real login portal only if clients need private estimates, invoices, or project updates.</li>
+            </ul>
+          </div>
+        </div>
+
+        <form name="client-registration" method="post" data-netlify="true" data-client-registration-form class="card">
+          <input type="hidden" name="form-name" value="client-registration">
+          <div class="notice" role="status">Thank you — your registration was saved.</div>
+          <div class="form-row">
+            <p><label for="client-name">Full name *</label><input id="client-name" name="client-name" autocomplete="name" required></p>
+            <p><label for="client-phone">Phone *</label><input id="client-phone" name="client-phone" autocomplete="tel" required></p>
+          </div>
+          <div class="form-row">
+            <p><label for="client-email">Email *</label><input id="client-email" type="email" name="client-email" autocomplete="email" required></p>
+            <p><label for="project-address">Project city or address *</label><input id="project-address" name="project-address" autocomplete="street-address" required></p>
+          </div>
+          <div class="form-row">
+            <p><label for="timeline">Desired timeline</label><select id="timeline" name="timeline"><option>As soon as possible</option><option>1–3 months</option><option>3–6 months</option><option>Planning for later</option></select></p>
+            <p><label for="budget">Budget range</label><select id="budget" name="budget"><option>Not sure yet</option><option>Under $10k</option><option>$10k–$25k</option><option>$25k–$50k</option><option>$50k+</option></select></p>
+          </div>
+          <p><label for="project-type">Project type *</label><select id="project-type" name="project-type" required><option value="">Choose one</option><option>Deck</option><option>Fence</option><option>Deck and fence</option><option>Repair</option><option>Gate or railing</option><option>Outdoor living package</option></select></p>
+          <p><label for="photo-link">Photo or file link</label><input id="photo-link" name="photo-link" placeholder="Google Drive, Dropbox, iCloud, or album link"></p>
+          <p><label for="registration-notes">Project notes *</label><textarea id="registration-notes" name="registration-notes" required placeholder="Describe the current deck/fence, approximate size, access, slope, materials you like, and anything urgent."></textarea></p>
+          <p><label><input type="checkbox" name="follow-up-consent" required> I agree that Cascadia Deck & Fence may contact me about this project. *</label></p>
+          <button class="btn" type="submit">Register project file</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container"><div><strong>Cascadia Deck & Fence</strong><p>Project registration and estimates for Greater Seattle homeowners.</p></div><div><a href="/services/deck-building-seattle.html">Deck building</a><a href="/services/fence-installation-seattle.html">Fence installation</a></div><div><a href="/locations/seattle.html">Seattle</a><a href="/locations/bellevue.html">Bellevue</a></div><div><a href="tel:[INSERT MY PHONE]">[INSERT MY PHONE]</a><a href="/">Home</a></div></div></footer>
+  <script src="/assets/site.js"></script>
+</body>
+</html>
