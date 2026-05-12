@@ -7,42 +7,58 @@ if (toggle && links) {
   });
 }
 
-function handleStoredForm(form, storageKey, successMessage) {
-  form.addEventListener('submit', (event) => {
+function formToPayload(form) {
+  return Object.fromEntries(new FormData(form).entries());
+}
+
+function setNotice(form, message, isError = false) {
+  const notice = form.querySelector('.notice');
+  if (!notice) return;
+  notice.textContent = message;
+  notice.classList.add('show');
+  notice.style.background = isError ? '#fff2e8' : '#e8f5e8';
+  notice.style.color = isError ? '#71330d' : '#19491f';
+}
+
+async function submitLeadForm(form) {
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (!form.checkValidity()) {
       form.reportValidity();
       return;
     }
-    const data = Object.fromEntries(new FormData(form).entries());
-    data.submittedAt = new Date().toISOString();
-    const records = JSON.parse(localStorage.getItem(storageKey) || '[]');
-    records.push(data);
-    localStorage.setItem(storageKey, JSON.stringify(records));
-    const notice = form.querySelector('.notice');
-    if (notice) {
-      notice.textContent = successMessage;
-      notice.classList.add('show');
+
+    const button = form.querySelector('button[type="submit"]');
+    const originalText = button ? button.textContent : '';
+    if (button) {
+      button.disabled = true;
+      button.textContent = 'Sending...';
     }
-    form.reset();
+
+    try {
+      const response = await fetch(form.action || '/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formToPayload(form)),
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        throw new Error(result.error || 'Form delivery is not configured yet. Please call or email Cascadia Deck & Fence directly.');
+      }
+      setNotice(form, result.message || 'Thank you — your request was sent. Cascadia Deck & Fence will follow up soon.');
+      form.reset();
+    } catch (error) {
+      setNotice(form, error.message, true);
+    } finally {
+      if (button) {
+        button.disabled = false;
+        button.textContent = originalText;
+      }
+    }
   });
 }
 
-document.querySelectorAll('[data-lead-form]').forEach((form) => {
-  handleStoredForm(
-    form,
-    'cascadiaLeads',
-    'Thank you — your estimate request was saved. Cascadia Deck & Fence will follow up soon.'
-  );
-});
-
-document.querySelectorAll('[data-client-registration-form]').forEach((form) => {
-  handleStoredForm(
-    form,
-    'cascadiaClientRegistrations',
-    'Thank you — your client project registration was saved. We will confirm the next step by phone or email.'
-  );
-});
+document.querySelectorAll('[data-lead-form], [data-client-registration-form]').forEach(submitLeadForm);
 
 const reviewWidget = document.querySelector('[data-google-reviews]');
 if (reviewWidget) {

@@ -74,8 +74,8 @@
     <section id="estimate" class="section soft">
       <div class="container form-wrap">
         <div><p class="eyebrow">Free estimate</p><h2>Ready to upgrade your deck or fence?</h2><p class="section-intro">Tell us about your property, timeline, and what you want built. We will follow up with next steps for your Greater Seattle project.</p><p><strong>Phone:</strong> <a href="tel:[INSERT MY PHONE]">[INSERT MY PHONE]</a><br><strong>Email:</strong> <a href="mailto:[INSERT MY EMAIL]">[INSERT MY EMAIL]</a></p></div>
-        <form name="estimate" method="post" data-netlify="true" data-lead-form class="card pad">
-          <input type="hidden" name="form-name" value="estimate"><div class="notice" role="status">Thank you — your estimate request was saved. Cascadia Deck & Fence will follow up soon.</div>
+        <form name="estimate" method="post" action="/api/lead" data-lead-form class="card pad">
+          <input type="hidden" name="form-name" value="estimate"><div class="notice" role="status">Submit the form and we will send your request to Cascadia Deck & Fence.</div>
           <div class="form-row"><p><label for="name">Name *</label><input id="name" name="name" autocomplete="name" required></p><p><label for="phone">Phone *</label><input id="phone" name="phone" autocomplete="tel" required></p></div>
           <div class="form-row"><p><label for="email">Email</label><input id="email" type="email" name="email" autocomplete="email"></p><p><label for="city">Project city *</label><input id="city" name="city" placeholder="Seattle, Bellevue, Renton..." required></p></div>
           <p><label for="service">Service needed *</label><select id="service" name="service" required><option value="">Choose one</option><option>New deck</option><option>Deck repair or resurfacing</option><option>New fence</option><option>Fence repair</option><option>Gate or railing</option><option>Outdoor living upgrade</option></select></p>

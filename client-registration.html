@@ -30,7 +30,7 @@
           <div class="card">
             <h3>Best next production upgrade</h3>
             <ul>
-              <li>Connect forms to Netlify Forms, Formspree, HubSpot, or a secure backend.</li>
+              <li>Connect forms to the Vercel `/api/lead` endpoint, HubSpot, Jobber, Airtable, or another secure CRM workflow.</li>
               <li>Add file upload for photos, survey documents, and inspiration images.</li>
               <li>Add automated email confirmation and calendar booking.</li>
               <li>Add a real login portal only if clients need private estimates, invoices, or project updates.</li>
@@ -38,9 +38,9 @@
           </div>
         </div>
 
-        <form name="client-registration" method="post" data-netlify="true" data-client-registration-form class="card">
+        <form name="client-registration" method="post" action="/api/lead" data-client-registration-form class="card">
           <input type="hidden" name="form-name" value="client-registration">
-          <div class="notice" role="status">Thank you — your registration was saved.</div>
+          <div class="notice" role="status">Submit the form and we will send your registration to Cascadia Deck & Fence.</div>
           <div class="form-row">
             <p><label for="client-name">Full name *</label><input id="client-name" name="client-name" autocomplete="name" required></p>
             <p><label for="client-phone">Phone *</label><input id="client-phone" name="client-phone" autocomplete="tel" required></p>
