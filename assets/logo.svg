@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">Cascadia Deck &amp; Fence elk logo</title>
+  <desc id="desc">An elk builder mascot with mountains, evergreens, and a level for Cascadia Deck and Fence.</desc>
+  <circle cx="160" cy="156" r="136" fill="#d8edf7" stroke="#49622d" stroke-width="10"/>
+  <path d="M37 199 112 94l37 56 31-37 101 86z" fill="#8cb6cf"/>
+  <path d="M112 94 93 150l19-14 12 29 25-15zm68 19-22 64 22-24 29 38 72 8z" fill="#f8fbf5" opacity=".9"/>
+  <path d="M60 215c19-52 34-74 45-74s19 25 29 25 19-33 33-33 28 58 84 82z" fill="#173f2a" opacity=".95"/>
+  <path d="M85 225v-54m0 0-22 33m22-33 22 33m65 32v-68m0 0-27 41m27-41 27 41m58 26v-52m0 0-20 31m20-31 20 31" stroke="#0d2c1c" stroke-width="9" stroke-linecap="round"/>
+  <path d="M111 76c-20-33-28-45-40-48 7 31 21 52 38 66m18-25c-5-38-8-54-19-65-6 29-4 54 7 76m94-4c20-33 28-45 40-48-7 31-21 52-38 66m-18-25c5-38 8-54 19-65 6 29 4 54-7 76" fill="none" stroke="#111" stroke-width="10" stroke-linecap="round"/>
+  <path d="M111 76c-20-33-28-45-40-48 7 31 21 52 38 66m18-25c-5-38-8-54-19-65-6 29-4 54 7 76m94-4c20-33 28-45 40-48-7 31-21 52-38 66m-18-25c5-38 8-54 19-65 6 29 4 54-7 76" fill="none" stroke="#b98239" stroke-width="5" stroke-linecap="round"/>
+  <path d="M102 122c-28-11-45-9-51 3 18 18 37 23 58 14m109-17c28-11 45-9 51 3-18 18-37 23-58 14" fill="#9b642f" stroke="#111" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M95 128c4-34 28-53 65-53s61 19 65 53c4 40-20 80-65 80s-69-40-65-80z" fill="#9b642f" stroke="#111" stroke-width="8"/>
+  <path d="M124 135c8 17 19 25 36 25s28-8 36-25c2 43-11 70-36 70s-38-27-36-70z" fill="#6f431e"/>
+  <circle cx="132" cy="120" r="11" fill="#111"/><circle cx="188" cy="120" r="11" fill="#111"/><circle cx="136" cy="116" r="4" fill="#fff"/><circle cx="192" cy="116" r="4" fill="#fff"/>
+  <path d="M145 145c5-7 25-7 30 0-3 13-27 13-30 0z" fill="#111"/>
+  <path d="M136 172c17 12 31 12 48 0" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round"/>
+  <rect x="218" y="130" width="32" height="98" rx="7" fill="#f2b72f" stroke="#111" stroke-width="7" transform="rotate(16 234 179)"/>
+  <circle cx="236" cy="161" r="9" fill="#d9f2ff" stroke="#111" stroke-width="4"/><circle cx="220" cy="216" r="9" fill="#d9f2ff" stroke="#111" stroke-width="4"/>
+  <path d="M26 236h268l-18 58H44z" fill="#203d1f" stroke="#111" stroke-width="8" stroke-linejoin="round"/>
+  <text x="160" y="270" text-anchor="middle" font-size="36" font-family="Georgia, serif" font-weight="900" fill="#fff7df">CASCADIA</text>
+  <text x="160" y="293" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" font-weight="800" fill="#fff">DECK &amp; FENCE</text>
+</svg>
